@@ -1,0 +1,13 @@
+<h1>Ingresar</h1>
+{{loginForm.value | json}}
+{{loginForm.valid}}
+
+<form [formGroup]="loginForm">
+    <label>Ingrese Correo: </label>
+    <input type="email" formControlName="email">
+    <br>
+    <label>Ingrese contraseña: </label>
+    <input type="password" formControlName="password">
+    <br>
+    <button (click)="funIngresar()" [disabled]="!loginForm.valid">Ingresar</button>
+</form>
