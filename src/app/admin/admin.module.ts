@@ -5,17 +5,20 @@ import { AdminRoutingModule } from './admin-routing.module';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { ClienteComponent } from './components/cliente/cliente.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AppLayoutModule } from './layout/app.layout.module';
+
 
 
 @NgModule({
   declarations: [
     PerfilComponent,
     ClienteComponent,
-    LayoutComponent
+    LayoutComponent  
   ],
   imports: [
     CommonModule,
-    AdminRoutingModule
+    AdminRoutingModule,
+    AppLayoutModule
   ]
 })
 export class AdminModule { }

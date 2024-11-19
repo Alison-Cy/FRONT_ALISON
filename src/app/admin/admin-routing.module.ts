@@ -3,11 +3,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { CategoriaComponent } from './inventario/components/categoria/categoria.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AppLayoutComponent } from './layout/app.layout.component';
 
 const routes: Routes = [
   {
     path:"",
-    component:LayoutComponent,
+    component:AppLayoutComponent,
     children:[
       {
         path:"perfil",
