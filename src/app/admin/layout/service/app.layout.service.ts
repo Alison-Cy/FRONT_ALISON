@@ -52,6 +52,7 @@ export class LayoutService {
 
     overlayOpen$ = this.overlayOpen.asObservable();
 
+
     constructor(@Inject(DOCUMENT) private document: Document) {
         effect(() => {
             const config = this.config();
@@ -138,7 +139,7 @@ export class LayoutService {
     }
     replaceThemeLink(href: string) {
         const id = 'theme-css';
-        let themeLink = <HTMLLinkElement>document.getElementById(id);
+        let themeLink = <HTMLLinkElement>this.document.getElementById(id);
         const cloneLinkElement = <HTMLLinkElement>themeLink.cloneNode(true);
 
         cloneLinkElement.setAttribute('href', href);
@@ -155,6 +156,6 @@ export class LayoutService {
     }
 
     changeScale(value: number) {
-        document.documentElement.style.fontSize = `${value}px`;
+        this.document.documentElement.style.fontSize = `${value}px`;
     }
 }
